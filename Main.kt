@@ -1,4 +1,4 @@
-import utils.example
+import utils.*
 import utils.linkedlist.LinkedList
 
 fun main() {
@@ -95,18 +95,110 @@ fun main() {
             println("After removing at index $index: $list")
             println("Removed value: $removedValue")
         }*/
+    /*    "printing doubles" example {
+            val list = LinkedList<Int>()
+            list.push(3)
+            list.push(2)
+            list.push(1)
+            println(list)
 
-    "printing doubles" example {
+            for (item in list) {
+                println("Double: ${item * 2}")
+            }
+        }*/
+    /*   "removing elements" example {
+           val list: MutableCollection<Int> = LinkedList()
+           list.add(3)
+           list.add(2)
+           list.add(1)
+
+           println(list)
+           list.remove(1)
+           println(list)
+       }
+   */
+    /*   "retaining elements" example {
+           val list: MutableCollection<Int> = LinkedList()
+           list.add(3)
+           list.add(2)
+           list.add(1)
+           list.add(4)
+           list.add(5)
+
+           println(list)
+           list.retainAll(listOf(3, 4, 5))
+           println(list)
+       }
+   */
+    /*   "remove all elements" example {
+           val list: MutableCollection<Int> = LinkedList()
+           list.add(3)
+           list.add(2)
+           list.add(1)
+           list.add(4)
+           list.add(5)
+
+           println(list)
+           list.removeAll(listOf(3, 4, 5))
+           println(list)
+       }*/
+    /*  "print in reverse" example {
+          val list = LinkedList<Int>()
+          list.add(3)
+          list.add(2)
+          list.add(1)
+          list.add(4)
+          list.add(5)
+
+          println(list)
+          list.printInReverse()
+      }
+  */
+    /*    "print middle" example {
+            val list = LinkedList<Int>()
+            list.add(3)
+            list.add(2)
+            list.add(1)
+            list.add(4)
+            list.add(5)
+
+            println(list)
+            println(list.getMiddle()?.value)
+        }*/
+    /*"reverse list" example {
         val list = LinkedList<Int>()
-        list.push(3)
-        list.push(2)
-        list.push(1)
-        println(list)
+        list.add(3)
+        list.add(2)
+        list.add(1)
+        list.add(4)
+        list.add(5)
 
-        for (item in list) {
-            println("Double: ${item * 2}")
-        }
+        println("Original: $list")
+        println("Reversed: ${list.reversed()}")
     }
+*/
+    /*    "merge lists" example {
+            val list = LinkedList<Int>()
+            list.add(1)
+            list.add(2)
+            list.add(3)
+            list.add(4)
+            list.add(5)
+
+            val other = LinkedList<Int>()
+            other.add(-1)
+            other.add(0)
+            other.add(2)
+            other.add(2)
+            other.add(7)
+
+            println("Left: $list")
+            println("Right: $other")
+            println("Merged: ${list.mergeSorted(other)}")
+        }*/
+
+
+
 
 }
 

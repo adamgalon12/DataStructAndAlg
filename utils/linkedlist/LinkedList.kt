@@ -48,15 +48,36 @@ class LinkedList<T : Any> : Iterable<T>, Collection<T>, MutableIterable<T>, Muta
     }
 
     override fun retainAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
+        var result = false
+        val iterator = this.iterator()
+        while (iterator.hasNext()) {
+            val item = iterator.next()
+            if (!elements.contains(item)) {
+                iterator.remove()
+                result = true
+            }
+        }
+        return result
     }
 
     override fun removeAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
+        var result = false
+        for (item in elements) {
+            result = remove(item) || result
+        }
+        return result
     }
 
     override fun remove(element: T): Boolean {
-        TODO("Not yet implemented")
+        val iterator = iterator()
+        while (iterator.hasNext()) {
+            val item = iterator.next()
+            if (item == element) {
+                iterator.remove()
+                return true
+            }
+        }
+        return false
     }
 
     override fun toString(): String {
