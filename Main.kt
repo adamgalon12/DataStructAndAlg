@@ -1,3 +1,6 @@
+import utils.example
+import utils.linkedlist.LinkedList
+
 fun main() {
     /*    println("hello")
         println(measureTimeMillis { sumFromOne(999999999) })
@@ -93,7 +96,17 @@ fun main() {
             println("Removed value: $removedValue")
         }*/
 
+    "printing doubles" example {
+        val list = LinkedList<Int>()
+        list.push(3)
+        list.push(2)
+        list.push(1)
+        println(list)
 
+        for (item in list) {
+            println("Double: ${item * 2}")
+        }
+    }
 
 }
 

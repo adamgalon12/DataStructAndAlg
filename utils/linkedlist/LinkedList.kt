@@ -2,17 +2,61 @@ package utils.linkedlist
 
 import utils.Node
 
-class LinkedList<T : Any> : Iterable<T> {
+class LinkedList<T : Any> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableCollection<T> {
 
     private var head: Node<T>? = null
     private var tail: Node<T>? = null
-    var size = 0
+    override var size = 0
         private set
 
-    fun isEmpty(): Boolean = size == 0
+    override fun clear() {
+        head = null
+        tail = null
+        size = 0
+    }
 
-    override fun iterator(): Iterator<T> {
+    override fun addAll(elements: Collection<T>): Boolean {
+        for (element in elements) {
+            append(element)
+        }
+        return true
+    }
+
+    override fun add(element: T): Boolean {
+        append(element)
+        return true
+    }
+
+    override fun containsAll(elements: Collection<T>): Boolean {
+        for (searched in elements) {
+            if (!contains(searched)) return false
+        }
+        return true
+    }
+
+    override fun contains(element: T): Boolean {
+        for (item in this) {
+            if (item == element) return true
+        }
+        return false
+    }
+
+    override fun isEmpty(): Boolean = size == 0
+
+    override fun iterator(): MutableIterator<T> {
         return LinkedListIterator(this)
+    }
+
+    override fun retainAll(elements: Collection<T>): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun removeAll(elements: Collection<T>): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun remove(element: T): Boolean {
+        TODO("Not yet implemented")
     }
 
     override fun toString(): String {
