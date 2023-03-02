@@ -1,6 +1,6 @@
-package utils.linkedlist
+package linkedlist
 
-import utils.Node
+import linkedlist.node.Node
 
 class LinkedListIterator<T : Any>(
     private val list: LinkedList<T>

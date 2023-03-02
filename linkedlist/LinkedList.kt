@@ -1,6 +1,6 @@
-package utils.linkedlist
+package linkedlist
 
-import utils.Node
+import linkedlist.node.Node
 
 class LinkedList<T : Any> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableCollection<T> {
 

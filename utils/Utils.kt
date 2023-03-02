@@ -1,6 +1,8 @@
 package utils
 
-import utils.linkedlist.LinkedList
+import linkedlist.LinkedList
+import linkedlist.node.Node
+import stack.StackImpl
 
 infix fun String.example(function: () -> Unit) {
     println("---Example of $this---")
@@ -84,4 +86,17 @@ private fun <T : Comparable<T>> append(
     return node.next
 }
 
+fun <T : Any> LinkedList<T>.printInReverseStack() {
+    val stack = StackImpl<T>()
+
+    for (node in this) {
+        stack.push(node)
+    }
+
+    var node = stack.pop()
+    while (node != null) {
+        print(node)
+        node = stack.pop()
+    }
+}
 

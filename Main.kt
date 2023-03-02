@@ -1,5 +1,8 @@
-import utils.*
-import utils.linkedlist.LinkedList
+import linkedlist.LinkedList
+import stack.StackImpl
+import stack.stackOf
+import utils.example
+import utils.printInReverseStack
 
 fun main() {
     /*    println("hello")
@@ -196,12 +199,49 @@ fun main() {
             println("Right: $other")
             println("Merged: ${list.mergeSorted(other)}")
         }*/
+    /* "using a stack" example {
+         val stack = StackImpl<Int>().apply {
+             push(1)
+             push(2)
+             push(3)
+             push(4)
+         }
+         print(stack)
+         val poppedElement = stack.pop()
+         if (poppedElement != null) {
+             println("Popped: $poppedElement")
+         }
+         print(stack)
+     }*/
+    /*    "initializing a stack from a list" example {
+            val list = listOf("A", "B", "C", "D")
+            val stack = StackImpl.create(list)
 
+            print(stack)
+            println("Popped: ${stack.pop()}")
+            println(stack)
+        }*/
+    /* "initializing a stack from an array literal" example {
+         val stack = stackOf(1.0, 2.0, 3.0, 4.0)
+         print(stack)
+         println("Popped: ${stack.pop()}")
+         print(stack)
+     }*/
+    /* "Given a linked list, print the nodes in reverse order." example {
+         val list = LinkedList<Int>()
+         list.add(1)
+         list.add(2)
+         list.add(3)
+         list.add(4)
+         list.add(5)
+
+         println(list)
+         list.printInReverseStack()
+     }*/
 
 
 
 }
-
 
 fun pseudoBinaryContains(value: Int, numbers: List<Int>): Boolean {
     if (numbers.isEmpty()) return false
